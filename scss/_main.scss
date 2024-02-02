@@ -33,6 +33,7 @@
 
 
         input {
+            cursor: pointer;
             display: block;
             padding: rem(16) rem(22);
             font-size: rem(32);
@@ -45,6 +46,10 @@
             outline: none;
             margin-bottom: 7px;
             text-transform: Uppercase;
+
+            &:focus {
+                border-color: $purple;
+            }
 
             @include breakpointDown(mobile) {
                 font-size: 20px;
