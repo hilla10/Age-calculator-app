@@ -1,0 +1,79 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: $offWhite;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+h1 {
+    font-size: rem(100);
+    font-weight: 800;
+    font-style: italic;
+
+    @include breakpointDown(tablet) {
+        font-size: 3.4rem;
+        padding-top: 22px;
+    }
+}
+
+span {
+    color: $purple;
+}
+
+.btn {
+    cursor: pointer;
+    display: block;
+    width: rem(115.9);
+    height: rem(100);
+    background: $purple;
+    border-radius: 50%;
+    border: none;
+    align-self: flex-end;
+    transition: background 0.5s ease-in-out;
+
+    @include breakpointDown(mobile) {
+        position: absolute;
+        top: -1.9rem;
+        left: 52.6%;
+        transform: translateX(-50%);
+        width: 4rem;
+        height: 4rem;
+    }
+
+    &:hover {
+        background: $offBlack;
+    }
+}
+
+.footer {
+    display: block;
+    width: 100%;
+    margin-top: rem(50);
+    padding: 30px;
+    background: $offBlack;
+    color: $White;
+    text-align: center;
+
+    a {
+        color: $smokeyGray;
+        transition: color 0.5s;
+
+        &:hover {
+        color: $purple;
+        text-decoration: none;
+    }
+}
+}
