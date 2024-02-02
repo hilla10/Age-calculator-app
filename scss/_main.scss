@@ -8,6 +8,7 @@
     flex-direction: column;
     justify-content: center;
     border-radius: rem(20) rem(20) rem(210) rem(20);
+    margin-top: 250px;
 
 
     @include breakpointDown(mobile) {
